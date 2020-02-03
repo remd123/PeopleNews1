@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_login">
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.appmenu.ui.login.LoginFragment"
+        android:label="@string/menu_login" />
+
+    <fragment
+        android:id="@+id/nav_dat_personal"
+        android:name="com.example.appmenu.ui.dpersonales.PersonalesFragment"
+        android:label="@string/menu_datos_personales"
+        tools:layout="@layout/fragment_datos_personales" />
+
+    <fragment
+        android:id="@+id/nav_permisos"
+        android:name="com.example.appmenu.ui.permisos.PermisoshowFragment"
+        android:label="@string/menu_permisos"
+        tools:layout="@layout/fragment_permisos" />
+
+    <fragment
+        android:id="@+id/nav_reposos"
+        android:name="com.example.appmenu.ui.reposos.RepososFragment"
+        android:label="@string/menu_reposo"
+        tools:layout="@layout/fragment_reposos" />
+
+    <fragment
+        android:id="@+id/nav_form_vacacion"
+        android:name="com.example.appmenu.ui.vacaciones.VacacionesFragment"
+        android:label="@string/menu_vacaciones"
+        tools:layout="@layout/fragment_vacaciones" />
+
+    <fragment
+        android:id="@+id/nav_estado_solicit"
+        android:name="com.example.appmenu.ui.estadoSolicitud.EstadoSolicitudFragment"
+        android:label="@string/menu_estado_solicitud" />
+</navigation>

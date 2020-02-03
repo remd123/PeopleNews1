@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_form_vacacion"
+            android:icon="@drawable/icon_vacaciones"
+            android:title="@string/menu_vacaciones" />
+        <item
+            android:id="@+id/nav_dat_personal"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_datos_personales" />
+        <item
+            android:id="@+id/nav_permisos"
+            android:icon="@drawable/icon_permisos"
+            android:title="@string/menu_permisos" />
+        <item
+            android:id="@+id/nav_reposos"
+            android:icon="@drawable/icon_reposo"
+            android:title="@string/menu_reposo" />
+    </group>
+
+    <item android:title="Acciones">
+        <menu>
+            <item
+
+            android:id="@+id/nav_notificaciones"
+            android:icon="@drawable/icon_notificacion"
+            android:title="@string/menu_login"/>
+            <item
+                android:id="@+id/nav_estado_solicit"
+                android:icon="@drawable/icon_estado"
+                android:title="@string/menu_estado_solicitud" />
+        </menu>
+    </item>
+
+</menu>
