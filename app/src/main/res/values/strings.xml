@@ -13,4 +13,7 @@
     <string name="menu_reposo">Reposos</string>
     <string name="menu_vacaciones">Vacaciones</string>
     <string name="menu_estado_solicitud">Estado Solicitud</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
