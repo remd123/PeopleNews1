@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_form_inicio"
+            android:icon="@drawable/icon_home"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_dat_personal"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/nav_permisos"
+            android:icon="@drawable/icon_permisos"
+            android:title="Permisos" />
+        <item
+            android:id="@+id/nav_reposos"
+            android:icon="@drawable/icon_reposo"
+            android:title="Reposos" />
+    </group>
+
+    <item android:title="Acciones">
+        <menu>
+            <item
+
+                android:id="@+id/nav_notificaciones"
+                android:icon="@drawable/icon_notificacion"
+                android:title="Notificaciones"/>
+            <item
+                android:id="@+id/nav_estado_solicit"
+                android:icon="@drawable/icon_estado"
+                android:title="Estado Solicitud" />
+        </menu>
+    </item>
+
+
+</menu>
