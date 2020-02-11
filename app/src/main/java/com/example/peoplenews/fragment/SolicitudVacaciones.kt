@@ -11,14 +11,17 @@ import py.edu.uca.peoplenews.R
 /**
  * A simple [Fragment] subclass.
  */
-class Fragment_Vacaciones : Fragment() {
+class SolicitudVacaciones : Fragment() {
+    companion object{
+        fun newInstance(): SolicitudVacaciones = SolicitudVacaciones()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment__vacaciones, container, false)
+        return inflater.inflate(R.layout.fragment_solicitud_vacaciones, container, false)
     }
 
 

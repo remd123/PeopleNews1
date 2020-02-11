@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_form_inicio"
+            android:id="@+id/menu_inicio"
             android:icon="@drawable/icon_home"
             android:title="Inicio" />
         <item
-            android:id="@+id/nav_dat_personal"
+            android:id="@+id/menu_vacacion"
+            android:icon="@drawable/icon_vacaciones"
+            android:title="Solicitud Vacaciones" />
+        <item
+            android:id="@+id/menu_ausencia"
+            android:icon="@drawable/icon_add"
+            android:title="Justificar Ausencia" />
+        <item
+            android:id="@+id/menu_dat_personal"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Perfil" />
+            android:title="Datos Personales" />
         <item
-            android:id="@+id/nav_permisos"
+            android:id="@+id/menu_permisos"
             android:icon="@drawable/icon_permisos"
-            android:title="Permisos" />
+            android:title="Solicitud Permisos" />
         <item
-            android:id="@+id/nav_reposos"
+            android:id="@+id/menu_reposos"
             android:icon="@drawable/icon_reposo"
-            android:title="Reposos" />
+            android:title="Solicitud Reposos" />
     </group>
 
     <item android:title="Acciones">
         <menu>
             <item
 
-                android:id="@+id/nav_notificaciones"
+                android:id="@+id/menu_notificaciones"
                 android:icon="@drawable/icon_notificacion"
                 android:title="Notificaciones"/>
             <item
-                android:id="@+id/nav_estado_solicit"
+                android:id="@+id/menu_estado_solicit"
                 android:icon="@drawable/icon_estado"
                 android:title="Estado Solicitud" />
         </menu>
     </item>
-
-
 </menu>

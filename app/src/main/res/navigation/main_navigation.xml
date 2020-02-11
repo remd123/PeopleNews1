@@ -2,54 +2,67 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_navigation"
-    app:startDestination="@id/login">
-
+    android:id="@+id/main_navigation">
     <fragment
-        android:id="@+id/login"
-        android:name="com.example.peoplenews.fragment.Login_fragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:id="@+id/datosPersonales2"
+        android:name="com.example.peoplenews.fragment.DatosPersonales"
+        android:label="fragment_datos_personales"
+        tools:layout="@layout/fragment_datos_personales" />
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.peoplenews.fragment.Inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_datosPersonales2"
+            app:destination="@id/datosPersonales2" />
+        <action
+            android:id="@+id/action_inicio_to_menu_reposos2"
+            app:destination="@id/menu_reposos2" />
+        <action
+            android:id="@+id/action_inicio_to_justificarAusencia"
+            app:destination="@id/justificarAusencia" />
+        <action
+            android:id="@+id/action_inicio_to_estadoSolicitud"
+            app:destination="@id/estadoSolicitud" />
+        <action
+            android:id="@+id/action_inicio_to_notificaciones"
+            app:destination="@id/notificaciones" />
+        <action
+            android:id="@+id/action_inicio_to_solicitudVacaciones"
+            app:destination="@id/solicitudVacaciones" />
+        <action
+            android:id="@+id/action_inicio_to_menu_permisos2"
+            app:destination="@id/menu_permisos2" />
     </fragment>
-
     <fragment
-        android:id="@+id/menuPrincipal"
-        android:name="com.example.peoplenews.fragment.Menu"
-        android:label="fragment_menu_principal"
-        tools:layout="@layout/fragment_menu" >
-        <action
-            android:id="@+id/action_menuPrincipal_to_fragment_Ausencias"
-            app:destination="@id/fragment_Ausencias" />
-        <action
-            android:id="@+id/action_menuPrincipal_to_fragment_menu_permisos"
-            app:destination="@id/fragment_menu_permisos" />
-        <action
-            android:id="@+id/action_menuPrincipal_to_fragment_Vacaciones"
-            app:destination="@id/fragment_Vacaciones" />
-        <action
-            android:id="@+id/action_menuPrincipal_to_fragment_menu_reposos"
-            app:destination="@id/fragment_menu_reposos" />
-    </fragment>
+        android:id="@+id/estadoSolicitud"
+        android:name="com.example.peoplenews.fragment.EstadoSolicitud"
+        android:label="fragment_estado_solicitud"
+        tools:layout="@layout/fragment_estado_solicitud" />
     <fragment
-        android:id="@+id/fragment_Ausencias"
-        android:name="com.example.peoplenews.fragment.Fragment_Ausencias"
-        android:label="fragment_fragment__ausencias"
-        tools:layout="@layout/fragment_fragment__ausencias" />
+        android:id="@+id/justificarAusencia"
+        android:name="com.example.peoplenews.fragment.JustificarAusencia"
+        android:label="fragment_justificar_ausencia"
+        tools:layout="@layout/fragment_justificar_ausencia" />
     <fragment
-        android:id="@+id/fragment_Vacaciones"
-        android:name="com.example.peoplenews.fragment.Fragment_Vacaciones"
-        android:label="fragment_fragment__vacaciones"
-        tools:layout="@layout/fragment_fragment__vacaciones" />
+        android:id="@+id/menu_permisos2"
+        android:name="com.example.peoplenews.fragment.Menu_permisos"
+        android:label="fragment_menu_permisos"
+        tools:layout="@layout/fragment_menu_permisos" />
     <fragment
-        android:id="@+id/fragment_menu_permisos"
-        android:name="com.example.peoplenews.fragment.Fragment_menu_permisos"
-        android:label="fragment_fragment_menu_permisos"
-        tools:layout="@layout/fragment_fragment_menu_permisos" />
+        android:id="@+id/menu_reposos2"
+        android:name="com.example.peoplenews.fragment.Menu_reposos"
+        android:label="fragment_menu_reposos"
+        tools:layout="@layout/fragment_menu_reposos" />
     <fragment
-        android:id="@+id/fragment_menu_reposos"
-        android:name="com.example.peoplenews.fragment.Fragment_menu_reposos"
-        android:label="fragment_fragment_menu_reposos"
-        tools:layout="@layout/fragment_fragment_menu_reposos" />
-
-
+        android:id="@+id/notificaciones"
+        android:name="com.example.peoplenews.fragment.Notificaciones"
+        android:label="fragment_notificaciones"
+        tools:layout="@layout/fragment_notificaciones" />
+    <fragment
+        android:id="@+id/solicitudVacaciones"
+        android:name="com.example.peoplenews.fragment.SolicitudVacaciones"
+        android:label="fragment_solicitud_vacaciones"
+        tools:layout="@layout/fragment_solicitud_vacaciones" />
 </navigation>

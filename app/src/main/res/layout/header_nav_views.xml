@@ -3,40 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:gravity="bottom"
     android:background="@color/colorPrimary"
+    android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:elevation="4dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:fitsSystemWindows="true">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Descripción Encabezado"
-        android:fitsSystemWindows="true"
-        android:paddingTop="5dp"
+        android:contentDescription="People News"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/icon_logo" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="People News"
+        android:textSize="20sp"
         android:textAlignment="center"
-        android:fitsSystemWindows="true"/>
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="20sp"
-        android:textAlignment="center"
-        android:text="Desarrollado por D.E.R"
-        android:fitsSystemWindows="true"/>
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:text="Desarrollado por D.E.R" />
 
 </LinearLayout>

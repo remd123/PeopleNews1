@@ -11,14 +11,17 @@ import py.edu.uca.peoplenews.R
 /**
  * A simple [Fragment] subclass.
  */
-class Fragment_menu_permisos : Fragment() {
+class Menu_permisos : Fragment() {
+    companion object{
+        fun newInstance(): Menu_permisos = Menu_permisos()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_menu_permisos, container, false)
+        return inflater.inflate(R.layout.fragment_menu_permisos, container, false)
     }
 
 
