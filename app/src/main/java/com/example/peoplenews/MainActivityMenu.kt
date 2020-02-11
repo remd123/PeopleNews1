@@ -6,6 +6,9 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.peoplenews.fragment.*
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main_menu.*
@@ -28,12 +31,13 @@ class MainActivityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSel
         // es para que escuche a esta actividad
         nav_view.setNavigationItemSelectedListener (this)
         // aca se carga por defecto un fragment
-        cambiarFragment(Inicio.newInstance())
+
+        //cambiarFragment(Inicio.newInstance())
 
         // boton que se encuentra en el menu que es para salir
-        boton_salir.setOnClickListener {
-            finish()
-        }
+//        boton_salir.setOnClickListener {
+//            finish()
+//        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -50,17 +54,19 @@ class MainActivityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSel
         // es para cerrar el menu
 
         when(menu.itemId){
-            R.id.menu_inicio -> cambiarFragment(Inicio.newInstance())
-            R.id.menu_vacacion -> cambiarFragment(SolicitudVacaciones.newInstance())
-            R.id.menu_dat_personal -> cambiarFragment(DatosPersonales.newInstance())
-            R.id.menu_permisos -> cambiarFragment(Menu_permisos.newInstance())
-            R.id.menu_reposos -> cambiarFragment(Menu_reposos.newInstance())
-            R.id.menu_notificaciones -> cambiarFragment(Notificaciones.newInstance())
-            R.id.menu_estado_solicit -> cambiarFragment(EstadoSolicitud.newInstance())
-            R.id.menu_ausencia -> cambiarFragment(JustificarAusencia.newInstance())
+//            R.id.menu_inicio -> cambiarFragment(Inicio.newInstance())
+//            R.id.menu_vacacion -> cambiarFragment(SolicitudVacaciones.newInstance())
+//            R.id.menu_dat_personal -> cambiarFragment(DatosPersonales.newInstance())
+//            R.id.menu_permisos -> cambiarFragment(Menu_permisos.newInstance())
+//            R.id.menu_reposos -> cambiarFragment(Menu_reposos.newInstance())
+//            R.id.menu_notificaciones -> cambiarFragment(Notificaciones.newInstance())
+//            R.id.menu_estado_solicit -> cambiarFragment(EstadoSolicitud.newInstance())
+//            R.id.menu_ausencia -> cambiarFragment(JustificarAusencia.newInstance())
 
 
             //R.id.menu_opcion2 -> cambiarFragment(Fragment2.newInstance())
+            R.id.menu_inicio-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.inicio)
+            R.id.menu_reposos-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.menu_reposos2)
 
         }
 
@@ -69,13 +75,14 @@ class MainActivityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSel
 
     }
 
-    private fun cambiarFragment(fragment: Fragment) {
-        //Toast.makeText(this, "Clic en $item", Toast.LENGTH_LONG).show()
 
-        // sirve para cargar llamar el fragment
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.contenedor, fragment)
-            .addToBackStack(null)
-            .commit()
-    }
+//    private fun cambiarFragment(fragment: Fragment) {
+//        //Toast.makeText(this, "Clic en $item", Toast.LENGTH_LONG).show()
+//
+//        // sirve para cargar llamar el fragment
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.contenedor, fragment)
+//            .addToBackStack(null)
+//            .commit()
+//    }
 }
