@@ -59,7 +59,7 @@ class MainActivityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSel
 //            R.id.menu_dat_personal -> cambiarFragment(DatosPersonales.newInstance())
 //            R.id.menu_permisos -> cambiarFragment(Menu_permisos.newInstance())
 //            R.id.menu_reposos -> cambiarFragment(Menu_reposos.newInstance())
-//            R.id.menu_notificaciones -> cambiarFragment(Notificaciones.newInstance())
+//            R.id.menu_notificaciones -> cambiarFragment(NotificacionesFragment.newInstance())
 //            R.id.menu_estado_solicit -> cambiarFragment(EstadoSolicitud.newInstance())
 //            R.id.menu_ausencia -> cambiarFragment(JustificarAusencia.newInstance())
 

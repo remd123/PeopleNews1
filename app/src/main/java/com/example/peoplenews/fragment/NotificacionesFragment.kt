@@ -11,9 +11,9 @@ import py.edu.uca.peoplenews.R
 /**
  * A simple [Fragment] subclass.
  */
-class Notificaciones : Fragment() {
+class NotificacionesFragment : Fragment() {
     companion object{
-        fun newInstance(): Notificaciones = Notificaciones()
+        fun newInstance(): NotificacionesFragment = NotificacionesFragment()
     }
 
     override fun onCreateView(

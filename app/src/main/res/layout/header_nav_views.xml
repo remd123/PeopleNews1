@@ -15,17 +15,17 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:contentDescription="People News"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/icon_logo" />
+        app:srcCompat="@drawable/user3" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="People News"
+        android:text="People News APP"
         android:textSize="20sp"
         android:textAlignment="center"
         android:textStyle="bold"

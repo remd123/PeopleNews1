@@ -14,7 +14,26 @@
         android:id="@+id/inicio"
         android:name="com.example.peoplenews.fragment.Inicio"
         android:label="fragment_inicio"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_menu_reposos2"
+            app:destination="@id/menu_reposos2" />
+        <action
+            android:id="@+id/action_inicio_to_datosPersonales2"
+            app:destination="@id/datosPersonales2" />
+        <action
+            android:id="@+id/action_inicio_to_solicitudVacaciones"
+            app:destination="@id/solicitudVacaciones" />
+        <action
+            android:id="@+id/action_inicio_to_justificarAusencia"
+            app:destination="@id/justificarAusencia" />
+        <action
+            android:id="@+id/action_inicio_to_notificaciones"
+            app:destination="@id/notificaciones" />
+        <action
+            android:id="@+id/action_inicio_to_menu_permisos2"
+            app:destination="@id/menu_permisos2" />
+    </fragment>
     <fragment
         android:id="@+id/estadoSolicitud"
         android:name="com.example.peoplenews.fragment.EstadoSolicitud"
@@ -41,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/notificaciones"
-        android:name="com.example.peoplenews.fragment.Notificaciones"
+        android:name="com.example.peoplenews.fragment.NotificacionesFragment"
         android:label="fragment_notificaciones"
         tools:layout="@layout/fragment_notificaciones" />
     <fragment
