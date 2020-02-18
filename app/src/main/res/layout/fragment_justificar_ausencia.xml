@@ -12,9 +12,9 @@
         android:id="@+id/textView9"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#B8F3EA"
+        android:background="@color/colorPrimary"
         android:text="JUSTIFICAR AUSENCIA"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingrese su motivo"
+            android:text="Detalle su motivo"
             android:textSize="18sp"
             android:textStyle="italic"
             tools:ignore="MissingConstraints" />
@@ -45,7 +45,7 @@
             android:layout_height="68dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="Motivo a justificar"
             tools:ignore="MissingConstraints" />
 
         <Space
@@ -59,6 +59,8 @@
             android:layout_marginStart="100dp"
             android:text="Enviar Solicitud"
             android:textSize="18sp"
+            android:textAlignment="center"
+            android:background="@drawable/boton_redondeado"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 

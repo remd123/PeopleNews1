@@ -67,6 +67,12 @@ class MainActivityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSel
             //R.id.menu_opcion2 -> cambiarFragment(Fragment2.newInstance())
             R.id.menu_inicio-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.inicio)
             R.id.menu_reposos-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.menu_reposos2)
+            R.id.menu_vacacion-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.solicitudVacaciones)
+            R.id.menu_dat_personal-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.datosPersonales2)
+            R.id.menu_permisos-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.menu_permisos2)
+            R.id.menu_notificaciones-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.notificacionesFragment)
+            R.id.menu_estado_solicit-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.estadoSolicitud)
+            R.id.menu_ausencia-> Navigation.findNavController(this,R.id.nav_host).navigate(R.id.justificarAusencia)
 
         }
 
