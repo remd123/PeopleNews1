@@ -7,11 +7,26 @@
     tools:context="com.example.peoplenews.fragment.NotificacionesFragment">
 
     <TextView
+        android:id="@+id/tvNoti_descripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Notificaciones"
         android:textSize="40sp"
         android:gravity="center"/>
+    <TextView
+        android:id="@+id/tvNoti_fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificaciones"
+        android:textSize="40sp"
+        android:gravity="center"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Notificaciones"-->
+<!--        android:textSize="40sp"-->
+<!--        android:gravity="center"/>-->
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_notificaciones"

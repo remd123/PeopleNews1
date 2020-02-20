@@ -37,8 +37,8 @@ class NotificacionAdapter(val context: Context,
 
 
         fun bindNotificacion(notificacion: NotificacionModel, listener: NotificacionInterface){
-            v.descripcion_notificacion.text= notificacion.notificacion_descripcion
-            v.fecha_notificacion.text=notificacion.fecha_notificacion
+            v.descripcion_notificacion.text= notificacion.descripcion
+            //v.fecha_notificacion.text=notificacion.fecha
 
             v.setOnClickListener{
                 listener.NotificacionClicked(notificacion)

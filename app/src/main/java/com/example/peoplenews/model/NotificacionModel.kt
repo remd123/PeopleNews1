@@ -1,7 +1,9 @@
 package com.example.peoplenews.model
 
+import java.util.*
+
 data class NotificacionModel (
-    val id_notificacion: Int,
-    val notificacion_descripcion: String,
-    val fecha_notificacion:String
+    val notificacionid: Int,
+    val descripcion: String,
+    val fecha:String
 )
