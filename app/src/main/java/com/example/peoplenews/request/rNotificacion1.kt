@@ -17,7 +17,7 @@ import retrofit2.http.Path
 import java.util.*
 import kotlin.collections.ArrayList
 
-interface NotificacionInterfase {
+interface rNotificacionInterfase {
 
     fun NotificacionClicked(notificacion: mNotificacion)
 }

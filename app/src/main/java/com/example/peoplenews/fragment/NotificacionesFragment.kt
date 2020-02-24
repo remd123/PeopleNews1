@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.peoplenews.adapter.NotiAdapter
 import com.example.peoplenews.model.mNotificacion
 import com.example.peoplenews.recursos.connector
 import com.example.peoplenews.request.rNotifacion
@@ -36,6 +38,7 @@ class NotificacionesFragment : Fragment(){
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
+
             // Inflate the layout for this fragment
             return inflater.inflate(R.layout.fragment_notificaciones, container, false)
         }
@@ -54,17 +57,19 @@ class NotificacionesFragment : Fragment(){
 
             val retrofit = connector().create(rNotifacion::class.java)
             mCompositeDisposable.add(
-                retrofit.getNotificacion(1)
+                retrofit.getNotificaciones()
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribeOn(Schedulers.io())
                     .subscribe(this::handleNotificacion, this::handleError)
             )
 
         }
-        private fun handleNotificacion(mnotificacion : mNotificacion){
+        private fun handleNotificacion(lnotificacion : ArrayList<mNotificacion>){
 
-        tvNoti_descripcion.text = "${mnotificacion.descripcion} "
-        tvNoti_fecha.text = "${mnotificacion.fecha}"
+            lista_notificaciones.layoutManager = LinearLayoutManager(this.context)
+            lista_notificaciones.adapter = NotiAdapter (lnotificacion)
+
+
 
         }
 
