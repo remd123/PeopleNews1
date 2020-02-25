@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-val URL = "http://192.168.0.11:5050/"
+val URL = "http://10.0.2.2:8080/RESTNewPeople/webresources/"
 
 fun connector() : Retrofit {
 
@@ -13,5 +13,4 @@ fun connector() : Retrofit {
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-
 }

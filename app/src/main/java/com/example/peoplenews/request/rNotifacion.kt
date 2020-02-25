@@ -11,10 +11,10 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface rNotifacion {
-    @GET("notificacion/{notificacionid}")
+    @GET("entity.notificaciones/{notificacionid}")
     fun getNotificacion(@Path("notificacionid") notificacionid: Int) : Observable<mNotificacion>
 
-    @GET("notificacion")
+    @GET("entity.notificaciones")
     fun getNotificaciones() : Observable<ArrayList<mNotificacion>>
 
 }
