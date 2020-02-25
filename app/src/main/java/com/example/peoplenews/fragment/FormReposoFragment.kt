@@ -8,25 +8,92 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.peoplenews.adapter.ReposoAdapter
-import com.example.peoplenews.adapter.ReposoInterface
-import com.example.peoplenews.model.ReposoModel
-import com.example.peoplenews.model.RepososResult
-
+import com.example.peoplenews.model.mAusencia
+import com.example.peoplenews.recursos.connector
+import com.example.peoplenews.request.rAusencia
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_form_reposo.*
+
 import py.edu.uca.peoplenews.R
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import kotlin.math.log
 
 /**
  * A simple [Fragment] subclass.
  */
 class FormReposoFragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view= inflater.inflate(R.layout.fragment_form_reposo, container, false)
+        //(activity as AppCompatActivity).setSupportActionBar(view.title_toolbar)
+
+        return view
+    }
+    companion object{
+        val tipoausenciaid=1
+        val estadoid=1
+        val personaid=1
+    }
+
+    private lateinit var mCompositeDisposable: CompositeDisposable
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        btn_enviar.setOnClickListener{
+            btnRegistrar()
+        }
+    }
+fun btnRegistrar(){
+    Toast.makeText(this.context, "Primer cuadro", Toast.LENGTH_LONG).show()
+    var mAusencia = mAusencia(null,
+        tipoausenciaid,
+        estadoid,
+        personaid,input_detalle_ausencia.text.toString(),f_final_ausencia.text.toString(),f_inicial_ausencia.text.toString())
+
+    postJsonAusencia(mAusencia)
+}
+    private fun postJsonAusencia(mAusencia: mAusencia){
+
+        val retrofit = connector().create(rAusencia::class.java)
+        mCompositeDisposable.add(
+            retrofit.postAusencia(mAusencia)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(this::handlePost,this::handleError)
+        )
+
+
+    }
+    private fun handlePost(){
+
+        Toast.makeText(this.context, "Se Posteo", Toast.LENGTH_LONG).show()
+
+                //Toast.makeText(requireContext(), "Hubo un error al obtener el reposo $call", Toast.LENGTH_SHORT).show()
+
+
+
+    }
+    private fun handleError(error: Throwable) {
+
+        Toast.makeText(this.context, "Error ${error.localizedMessage}", Toast.LENGTH_LONG).show()
+        Log.d("Text","Hubo un erro al obtener reposo  ${error.localizedMessage}")
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        mCompositeDisposable!!.clear()
+        mCompositeDisposable!!.dispose()
+    }
+
+
+
 //    override fun ReposoClicked(reposo: ReposoModel) {
 //         Toast.makeText(requireContext(), "Se obtuvo la pelicula con id:", Toast.LENGTH_SHORT).show()
 //        val action=Menu_repososDirections.actionMenuReposos2ToFormReposoFragment(reposo.id_titulo)

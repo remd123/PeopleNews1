@@ -9,7 +9,7 @@ import retrofit2.http.Path
 
 public interface rPersona{
 
-    @GET("persona/{personaid}")
+    @GET("entity.personas/{personaid}")
     fun getPersona(@Path("personaid") personaid: Int) : Observable<mPersona>
 
     @POST("persona")

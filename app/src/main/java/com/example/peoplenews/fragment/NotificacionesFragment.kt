@@ -34,7 +34,7 @@ class NotificacionesFragment : Fragment(){
 
 
         companion object{
-            fun newInstance(): Inicio = Inicio()
+            fun newInstance(): NotificacionesFragment = NotificacionesFragment()
         }
 
         override fun onCreateView(
