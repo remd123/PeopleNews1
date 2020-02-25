@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.peoplenews.adapter.NotiAdapter
@@ -18,6 +19,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_notificaciones.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.toolbar.view.*
 import py.edu.uca.peoplenews.R
 
 
@@ -41,7 +43,9 @@ class NotificacionesFragment : Fragment(){
         ): View? {
 
             // Inflate the layout for this fragment
-            return inflater.inflate(R.layout.fragment_notificaciones, container, false)
+            val view= inflater.inflate(R.layout.fragment_notificaciones, container, false)
+            //(activity as AppCompatActivity).setSupportActionBar(view.title_toolbar)
+            return view
         }
 
 
