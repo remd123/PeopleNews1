@@ -17,6 +17,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_notificaciones.*
+import kotlinx.android.synthetic.main.toolbar.*
 import py.edu.uca.peoplenews.R
 
 
@@ -46,6 +47,7 @@ class NotificacionesFragment : Fragment(){
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
+            //title_toolbar.setTitle("Notificaciones")
 
             mCompositeDisposable = CompositeDisposable()
 

@@ -39,6 +39,8 @@ class NotiAdapter(var lnotificaciones : ArrayList<mNotificacion>) : RecyclerView
         holder as viewHolderNotificacion
 
         holder.tvdescirpcion.text = lnotificaciones[position].descripcion
+        holder.tvfecha.text = lnotificaciones[position].fecha
+
 
 
 
