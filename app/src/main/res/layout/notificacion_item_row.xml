@@ -10,44 +10,44 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
         app:cardElevation="8dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="5dp">
 
             <ImageView
                 android:id="@+id/img_notificacion"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/icon_notificacion" />
+                android:src="@drawable/ic_notifications" />
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="6dp">
 
-                <TextView
-                    android:id="@+id/id_nombre_notificacion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:text="Notificacion Importante"
-                    android:textColor="#131414"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/id_nombre_notificacion"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Notificacion Importante"-->
+<!--                    android:textColor="#131414"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:textStyle="bold" />-->
 
                 <TextView
                     android:id="@+id/fecha_notificacion"
